@@ -1,282 +1,243 @@
-/* =========================
-   GOOGLE FONT
-========================= */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* ========================= GOOGLE FONT ========================= */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); 
 
-/* =========================
-   DESIGN SYSTEM
-========================= */
-:root{
-    --bg: #0b1220;
-    --bg2: #020617;
-    --card: rgba(30, 41, 59, 0.55);
-    --border: rgba(255,255,255,0.08);
-    --text: #ffffff;
-    --muted: rgba(255,255,255,0.7);
-    --primary: #38bdf8;
-    --primary-dark: #0ea5e9;
-    --shadow: 0 10px 30px rgba(0,0,0,0.4);
+/* ========================= DESIGN SYSTEM ========================= */ 
+:root{ 
+  --bg: #0b1220; 
+  --bg2: #020617; 
+  --card: rgba(30, 41, 59, 0.55); 
+  --border: rgba(255,255,255,0.08); 
+  --text: #ffffff; 
+  --muted: rgba(255,255,255,0.7); 
+  --primary: #38bdf8; 
+  --primary-dark: #0ea5e9; 
+  --shadow: 0 10px 30px rgba(0,0,0,0.4); 
+} 
+
+/* ========================= RESET ========================= */ 
+*{ 
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box; 
+  font-family:'Poppins', sans-serif; 
+} 
+
+html{ 
+  scroll-behavior:smooth; 
+} 
+
+body{ 
+  background: linear-gradient(180deg, var(--bg2), var(--bg)); 
+  color: var(--text); 
+  line-height:1.6; 
+} 
+
+/* ========================= NAVIGATION ========================= */ 
+nav{ 
+  position: sticky; 
+  top:0; 
+  z-index:1000; 
+  background: rgba(2,6,23,0.85); 
+  backdrop-filter: blur(12px); 
+  padding:14px; 
+  text-align:center; 
+  border-bottom:1px solid var(--border); 
+} 
+
+nav a{ 
+  color: var(--text); 
+  margin:0 12px; 
+  text-decoration:none; 
+  font-weight:500; 
+  font-size:14px; 
+  transition:0.3s; 
+  position:relative; 
+} 
+
+nav a::after{ 
+  content:""; 
+  position:absolute; 
+  left:0; 
+  bottom:-5px; 
+  width:0%; 
+  height:2px; 
+  background: var(--primary); 
+  transition:0.3s; 
+} 
+
+nav a:hover{ 
+  color: var(--primary); 
+} 
+
+nav a:hover::after{ 
+  width:100%; 
+} 
+
+/* ========================= TYPOGRAPHY ========================= */ 
+h1,h2,h3{ 
+  font-weight:600; 
+  letter-spacing:0.3px; 
+} 
+
+p{ 
+  color: var(--muted); 
+} 
+
+/* ========================= CONTAINER ========================= */ 
+.container{ 
+  width:90%; 
+  max-width:1100px; 
+  margin:auto; 
+  padding:50px 0; 
+} 
+
+/* ========================= HERO SECTION ========================= */ 
+.hero{ 
+  text-align:center; 
+  padding:90px 20px; 
+} 
+
+.hero h1{ 
+  font-size:38px; 
+} 
+
+.hero p{ 
+  margin-top:8px; 
+  color: var(--primary); 
+  font-weight:500; 
+} 
+
+.desc{ 
+  max-width:650px; 
+  margin:15px auto; 
+  color: var(--muted); 
+} 
+
+/* ========================= PROFILE IMAGE ========================= */ 
+.profile-pic{ 
+  width:140px; 
+  height:140px; 
+  border-radius:50%; 
+  object-fit:cover; 
+  border:3px solid var(--primary); 
+  box-shadow: var(--shadow); 
+  margin-bottom:15px; 
+} 
+
+/* ========================= BUTTONS ========================= */ 
+.btn{ 
+  display:inline-block; 
+  padding:12px 20px; 
+  border-radius:30px; 
+  text-decoration:none; 
+  font-weight:600; 
+  transition:0.3s ease; 
+  font-size:14px; 
+} 
+
+.btn-primary{ 
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)); 
+  color:#000; 
+} 
+
+.btn-primary:hover{ 
+  transform: translateY(-3px); 
+  box-shadow:0 10px 20px rgba(56,189,248,0.3); 
+} 
+
+.btn-outline{ 
+  border:1px solid var(--primary); 
+  color: var(--primary); 
+} 
+
+.btn-outline:hover{ 
+  background: var(--primary); 
+  color:#000; 
+  transform: translateY(-3px); 
+} 
+
+/* ========================= CARDS ========================= */ 
+.card{ 
+  background: var(--card); 
+  border:1px solid var(--border); 
+  border-radius:16px; 
+  padding:20px; 
+  margin-bottom:15px; 
+  backdrop-filter: blur(12px); 
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2); 
+  transition:0.3s ease; 
+} 
+
+.card:hover{ 
+  transform: translateY(-8px); 
+  box-shadow: 0 15px 35px rgba(56,189,248,0.15); 
+} 
+
+/* ========================= GRID SYSTEM ========================= */ 
+.grid{ 
+  display:grid; 
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); 
+  gap:18px; 
+} 
+
+/* ========================= SECTION TITLE ========================= */ 
+.section-title, h2{ 
+  font-size:22px; 
+  margin-bottom:15px; 
+  color: var(--primary); 
+} 
+
+/* ========================= STATS ========================= */ 
+.stat{ 
+  text-align:center; 
+  padding:20px; 
+  border-radius:14px; 
+  background: rgba(30,41,59,0.4); 
+  border:1px solid var(--border); 
+} 
+
+.stat h3{ 
+  font-size:26px; 
+  color: var(--primary); 
+} 
+
+/* ========================= FOOTER ========================= */ 
+footer{ 
+  text-align:center; 
+  padding:25px; 
+  background: var(--bg2); 
+  border-top:1px solid var(--border); 
+  margin-top:50px; 
+  font-size:14px; 
+} 
+
+/* ========================= WHATSAPP FLOAT ========================= */ 
+.whatsapp{ 
+  position:fixed; 
+  bottom:20px; 
+  right:20px; 
+  background:#25D366; 
+  color:white; 
+  padding:13px 16px; 
+  border-radius:50px; 
+  text-decoration:none; 
+  font-weight:bold; 
+  box-shadow:0 10px 25px rgba(0,0,0,0.4); 
+  transition:0.3s; 
+} 
+
+.whatsapp:hover{ 
+  transform:scale(1.1); 
+} 
+
+/* ========================= ANIMATION ========================= */ 
+.card, .btn{ 
+  transition: all 0.3s ease; 
+} 
+
+/* ========================= MOBILE ========================= */ 
+@media(max-width:600px){ 
+  .hero h1{ 
+    font-size:28px; 
+  }
 }
-
-/* =========================
-   RESET
-========================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background: linear-gradient(180deg, var(--bg2), var(--bg));
-    color: var(--text);
-    line-height:1.6;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-nav{
-    position: sticky;
-    top:0;
-    z-index:1000;
-    background: rgba(2,6,23,0.85);
-    backdrop-filter: blur(12px);
-    padding:14px;
-    text-align:center;
-    border-bottom:1px solid var(--border);
-}
-
-nav a{
-    color: var(--text);
-    margin:0 12px;
-    text-decoration:none;
-    font-weight:500;
-    font-size:14px;
-    transition:0.3s;
-    position:relative;
-}
-
-nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0%;
-    height:2px;
-    background: var(--primary);
-    transition:0.3s;
-}
-
-nav a:hover{
-    color: var(--primary);
-}
-
-nav a:hover::after{
-    width:100%;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-h1,h2,h3{
-    font-weight:600;
-    letter-spacing:0.3px;
-}
-
-p{
-    color: var(--muted);
-}
-
-/* =========================
-   CONTAINER
-========================= */
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:50px 0;
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-.hero{
-    text-align:center;
-    padding:90px 20px;
-}
-
-.hero h1{
-    font-size:38px;
-}
-
-.hero p{
-    margin-top:8px;
-    color: var(--primary);
-    font-weight:500;
-}
-
-.desc{
-    max-width:650px;
-    margin:15px auto;
-    color: var(--muted);
-}
-
-/* =========================
-   PROFILE IMAGE
-========================= */
-.profile-pic{
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid var(--primary);
-    box-shadow: var(--shadow);
-    margin-bottom:15px;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-.btn{
-    display:inline-block;
-    padding:12px 20px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s ease;
-    font-size:14px;
-}
-
-.btn-primary{
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color:#000;
-}
-
-.btn-primary:hover{
-    transform: translateY(-3px);
-    box-shadow:0 10px 20px rgba(56,189,248,0.3);
-}
-
-.btn-outline{
-    border:1px solid var(--primary);
-    color: var(--primary);
-}
-
-.btn-outline:hover{
-    background: var(--primary);
-    color:#000;
-    transform: translateY(-3px);
-}
-
-/* =========================
-   CARDS
-========================= */
-.card{
-    background: var(--card);
-    border:1px solid var(--border);
-    border-radius:16px;
-    padding:20px;
-    margin-bottom:15px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    transition:0.3s ease;
-}
-
-.card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(56,189,248,0.15);
-}
-
-/* =========================
-   GRID SYSTEM
-========================= */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:18px;
-}
-
-/* =========================
-   SECTION TITLE
-========================= */
-.section-title, h2{
-    font-size:22px;
-    margin-bottom:15px;
-    color: var(--primary);
-}
-
-/* =========================
-   STATS
-========================= */
-.stat{
-    text-align:center;
-    padding:20px;
-    border-radius:14px;
-    background: rgba(30,41,59,0.4);
-    border:1px solid var(--border);
-}
-
-.stat h3{
-    font-size:26px;
-    color: var(--primary);
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer{
-    text-align:center;
-    padding:25px;
-    background: var(--bg2);
-    border-top:1px solid var(--border);
-    margin-top:50px;
-    font-size:14px;
-}
-
-/* =========================
-   WHATSAPP FLOAT
-========================= */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:13px 16px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
-    transition:0.3s;
-}
-
-.whatsapp:hover{
-    transform:scale(1.1);
-}
-
-/* =========================
-   ANIMATION
-========================= */
-.card, .btn{
-    transition: all 0.3s ease;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media(max-width:600px){
-    .hero h1{
-        font-size:28px;
-    }
-
-    nav a{
-        margin:6px;
-        font-size:13px;
-    }
-    }
