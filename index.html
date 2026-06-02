@@ -1,32 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Business Website</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iyatse Godsgift | Web Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#020617,#0f172a);
+    color:white;
+    line-height:1.6;
+}
+
+/* NAV */
+nav{
+    position:sticky;
+    top:0;
+    background:rgba(2,6,23,0.8);
+    backdrop-filter:blur(10px);
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    margin:0 12px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+header{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.profile-pic{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #38bdf8;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:32px;
+}
+
+.subtitle{
+    color:#38bdf8;
+    margin-top:5px;
+    font-weight:500;
+}
+
+.desc{
+    max-width:600px;
+    margin:15px auto;
+    opacity:0.9;
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    margin:10px 5px;
+    padding:10px 18px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#38bdf8;
+    color:#000;
+}
+
+.btn-primary:hover{
+    transform:scale(1.05);
+}
+
+.btn-outline{
+    border:1px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.btn-outline:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* SECTION */
+.section{
+    margin-bottom:50px;
+}
+
+.section h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+/* CARD */
+.card{
+    background:rgba(30,41,59,0.6);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:12px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    margin-top:30px;
+}
+
+/* FLOAT WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:12px 16px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
+
+<!-- HERO -->
+<header>
+    <img src="godsgift.jpg" class="profile-pic">
+
+    <h1>Iyatse Godsgift</h1>
+    <div class="subtitle">Web Developer • Network Engineer • IT Support</div>
+
+    <p class="desc">
+        I build modern, responsive websites for businesses and provide IT solutions including networking and cybersecurity basics.
+    </p>
+
+    <a class="btn btn-primary" href="https://wa.me/2348055708091?text=Hello%20I%20need%20a%20website">Hire Me</a>
+    <a class="btn btn-outline" href="CV.pdf" download>Download CV</a>
+</header>
 
 <div class="container">
 
+<!-- ABOUT -->
+<section class="section" id="about">
+    <h2>About Me</h2>
     <div class="card">
-        <h1>Welcome to Our Business</h1>
-        <p>We provide professional services tailored to your needs.</p>
-        <a class="btn" href="contact.html">Get in Touch</a>
+        I am a Computer Science student passionate about web development, networking, and cybersecurity. I help small businesses build online presence through modern websites.
     </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <h2>Services</h2>
+
+    <div class="grid">
+        <div class="card">🌐 Website Development</div>
+        <div class="card">🛠️ IT Support</div>
+        <div class="card">🔐 Cybersecurity Basics</div>
+        <div class="card">🌍 Networking Setup</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <b>VLAN Network Design</b>
+        <p>Configured VLAN segmentation using Cisco Packet Tracer for secure network separation.</p>
+    </div>
+
+    <div class="card">
+        <b>OSPF Routing Lab</b>
+        <p>Implemented dynamic routing using OSPF for multi-network communication.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Contact</h2>
+
+    <div class="card">
+        📧 Email: godsgiftiyatse@gmail.com<br>
+        📞 Phone: 08055708091<br>
+        📍 Location: Delta State, Nigeria<br><br>
+
+        <a class="btn btn-primary" href="https://wa.me/2348055708091?text=Hello%20I%20want%20a%20website">
+            Chat on WhatsApp
+        </a>
+    </div>
+</section>
 
 </div>
 
 <footer>
-    © 2026 Business Name
+    © 2026 Iyatse Godsgift. All Rights Reserved.
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/2348055708091?text=Hello%20I%20need%20a%20website">
+💬 WhatsApp
+</a>
 
 </body>
 </html>
