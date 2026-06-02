@@ -1,12 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Iyatse Godsgift</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#020617,#0f172a);
+    color:white;
+    line-height:1.6;
+}
+
+/* NAV */
+nav{
+    position:sticky;
+    top:0;
+    background:rgba(2,6,23,0.8);
+    backdrop-filter:blur(10px);
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:0 12px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* HEADER */
+.hero{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    color:#38bdf8;
+    margin-top:5px;
+}
+
+/* CARD */
+.card{
+    background:rgba(30,41,59,0.6);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+/* CONTACT BOXES */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.info{
+    font-size:16px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    background:#38bdf8;
+    color:black;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* FORM */
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+}
+
+textarea{
+    resize:none;
+    height:120px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    margin-top:30px;
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -16,21 +140,65 @@
 
 <div class="container">
 
+<!-- HEADER -->
+<div class="hero">
+    <h1>Contact Me</h1>
+    <p>Let’s build something amazing together</p>
+</div>
+
+<!-- CONTACT INFO -->
+<div class="grid">
+
     <div class="card">
-        <h2>Contact Us</h2>
+        <h3>📞 Phone / WhatsApp</h3>
+        <p class="info">08055708091</p>
 
-        <p>Email: business@gmail.com</p>
-        <p>Phone: 08000000000</p>
+        <a class="btn" href="https://wa.me/2348055708091?text=Hello%20I%20want%20to%20hire%20you">
+            Chat on WhatsApp
+        </a>
+    </div>
 
-        <a class="btn" href="https://wa.me/2348055708091?text=Hello%20I%20need%20your%20services">
-            WhatsApp Us
+    <div class="card">
+        <h3>📧 Email</h3>
+        <p class="info">godsgiftiyatse@gmail.com</p>
+
+        <a class="btn" href="mailto:godsgiftiyatse@gmail.com">
+            Send Email
         </a>
     </div>
 
 </div>
 
+<!-- SIMPLE MESSAGE FORM (NO BACKEND, JUST DESIGN) -->
+<div class="card">
+    <h3>💬 Send a Message</h3>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+
+        <a class="btn" href="https://wa.me/2348055708091?text=Hello%20I%20need%20your%20services">
+            Send via WhatsApp
+        </a>
+    </form>
+</div>
+
+<!-- TRUST SECTION -->
+<div class="card">
+    <h3>Why work with me?</h3>
+    <p>
+        ✔ Fast delivery (2–5 days)<br>
+        ✔ Clean modern websites<br>
+        ✔ Affordable pricing<br>
+        ✔ Good communication
+    </p>
+</div>
+
+</div>
+
 <footer>
-    © 2026 Business Name
+    © 2026 Iyatse Godsgift. All Rights Reserved.
 </footer>
 
 </body>
